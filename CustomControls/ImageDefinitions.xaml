@@ -7,8 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="90" d:DesignWidth="150">
     <Grid>
-        <Image x:Name="btnImage" Source="{Binding Path=ImageSource}" />
-        <TextBlock x:Name="txtText1" Text="{Binding Path=FirstText}" />
-        <TextBlock x:Name="txtText2" Text="{Binding Path=SecondText}" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="btnImage" Grid.Row="0" HorizontalAlignment="Left" Source="{Binding Path=ImageSource}" />
+        <TextBlock FontWeight="Bold" Grid.RowSpan="2" x:Name="txtText1" VerticalAlignment="Center" Grid.Row="1" Text="{Binding Path=FirstText}" HorizontalAlignment="Left"/>
+        <TextBlock FontWeight="Bold" x:Name="txtText2" Grid.Row="1" VerticalAlignment="Bottom" Text="{Binding Path=SecondText}" HorizontalAlignment="Left"/>
     </Grid>
 </UserControl>
