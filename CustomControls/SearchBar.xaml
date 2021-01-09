@@ -11,7 +11,7 @@
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="txtText1" Text="{Binding Path=Text1}" Grid.Column="0"/>
+        <TextBlock x:Name="txtText1" Text="{Binding Path=Text1}" VerticalAlignment="Center" Grid.Column="0"/>
         <Image x:Name="imgSource" Source="{Binding Path=ImageSource}" Grid.Column="1"/>
     </Grid>
 </UserControl>
