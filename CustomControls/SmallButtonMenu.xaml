@@ -11,7 +11,7 @@
             <ColumnDefinition Width="30"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="btnImageSource" Source="{Binding Path=ImageSource}" />
-        <TextBlock x:Name="btnText" Text="{Binding Path=Text}" />
+        <Image Height="20" x:Name="btnImageSource" Source="{Binding Path=ImageSource}" Grid.Column="0"/>
+        <TextBlock x:Name="btnText" FontWeight="SemiBold" Text="{Binding Path=Text}" VerticalAlignment="Center" Grid.Column="1"/>
     </Grid>
 </UserControl>

@@ -7,6 +7,8 @@
         xmlns:customcontrols="clr-namespace:MVVMFIleManagerWPF.CustomControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1350">
+    <Border Background="Transparent">
+        <Border Background="#FF37A0EA" CornerRadius="20" BorderThickness="0">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -15,35 +17,51 @@
         </Grid.ColumnDefinitions>
 
         <!-- Left Menu -->
-        <StackPanel Grid.Column="0">
-            <TextBlock Text="drive." />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/mmc.png" Text="My drive" />
-            <TextBlock Text="FILES" />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/todobw.png" Text="My files" />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/todobw.png" Text="Sharing" />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/todobw.png" Text="File requests" />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/trash.png" Text="Deleted files" />
-            <TextBlock Text="MY PLACES" />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/folder.png" Text="Designs" />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/folder.png" Text="Music" />
-            <customcontrols:SmallButtonMenu ImageSource="../Assets/folder.png" Text="Design Sprint" />
-            <customcontrols:UserButton ImageSource="../Assets/image4.jpg"  Username="Username" Status="Premium VIP"/>
-        </StackPanel>
-        
-        <!-- Main Menu -->
-        <StackPanel>
+        <StackPanel Grid.Column="0" Margin="40,70,0,0">
+            <TextBlock Text="drive." Foreground="#676EAA" FontSize="30" FontWeight="Bold"/>
+
+            <customcontrols:SmallButtonMenu Foreground="#676EAA" ImageSource="../Assets/mmc.png" Text="My drive"  Margin="0,80"/>
             
-            <Grid>
+            <StackPanel>
+                <TextBlock Text="FILES" Foreground="#CFCDCF" FontWeight="SemiBold" Margin="10"/>
+                <customcontrols:SmallButtonMenu ImageSource="../Assets/todobw.png" Text="My files" />
+                <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/todobw.png" Text="Sharing" />
+                <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/todobw.png" Text="File requests" />
+                <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/trash.png" Text="Deleted files" />
+            </StackPanel>
+
+            <StackPanel Margin="0,50">
+            <TextBlock Text="MY PLACES" Foreground="#CFCDCF" FontWeight="SemiBold" Margin="10"/>
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/folder.png" Text="Designs" />
+            <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/folder.png" Text="Music" />
+                <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/folder.png" Text="Design Sprint" />
+            </StackPanel>
+            
+        </StackPanel>
+
+        <customcontrols:UserButton Margin="30,750,30,0" ImageSource="../Assets/image4.jpg"  Username="Username" Status="Premium VIP" />
+
+        <!-- Main Menu -->
+        <Border Grid.Column="1" Background="Transparent">
+            <Border Background="DarkRed" CornerRadius="10" BorderThickness="0">
+                        
+                    
+        <StackPanel Grid.Column="1">
+            
+            <Grid Margin="40,20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="30"/>
                     <ColumnDefinition Width="30"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
-                
+
+                <Image Source="../Assets/left.png" Grid.Column="0"/>
+                <Image Source="../Assets/right.png" Grid.Column="1"/>
+                <Button Content="UPLOAD NEW FILE" Grid.Column="3"/>
             </Grid>
 
-            <TextBlock Text="Recently Used"/>
+            <TextBlock Margin="40,10,0,0" Text="Recently Used" FontWeight="Bold" FontSize="18"/>
 
             <StackPanel Orientation="Horizontal">
                 
@@ -83,9 +101,11 @@
             </StackPanel>
 
         </StackPanel>
-        
-        <!-- Right Menu -->
-        <StackPanel>
+            </Border>
+        </Border>
+
+                <!-- Right Menu -->
+        <StackPanel Grid.Column="2">
             <customcontrols:SearchBar Text1="" ImageSource="../Assets/todobw.png" />
             <TextBlock Text="Statistics" />
             <customcontrols:Stats FirstText="Downloads this week" Number="./Assets/applogoexample.png" SecondText="perday" />
@@ -98,4 +118,6 @@
         </StackPanel>
 
     </Grid>
+        </Border>
+    </Border>
 </Window>
