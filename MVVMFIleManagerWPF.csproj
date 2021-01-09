@@ -64,6 +64,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControls\SearchBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\SmallButtonMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,6 +94,9 @@
     </Compile>
     <Compile Include="CustomControls\ImageDefinitions.xaml.cs">
       <DependentUpon>ImageDefinitions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SearchBar.xaml.cs">
+      <DependentUpon>SearchBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\SmallButtonMenu.xaml.cs">
       <DependentUpon>SmallButtonMenu.xaml</DependentUpon>

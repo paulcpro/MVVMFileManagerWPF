@@ -20,9 +20,71 @@ namespace MVVMFIleManagerWPF.CustomControls
     /// </summary>
     public partial class Stats : UserControl
     {
+
+        #region Properties
+
+        /// <summary>
+        /// Left Text displaying the headline
+        /// </summary>
+        public string FirstText
+        {
+            get
+            {
+                return this.txtFirst.Text;
+            }
+
+            set
+            {
+                this.txtFirst.Text = value;
+            }
+
+        }
+
+        /// <summary>
+        /// Displayed Number of quantity retrieved
+        /// </summary>
+        public string Number
+        {
+            get
+            {
+                return this.txtNumber.Text;
+            }
+
+            set
+            {
+                this.txtNumber.Text = value;
+            }
+
+        }
+
+        /// <summary>
+        /// Right Text displaying the caption
+        /// </summary>
+        public string SecondText
+        {
+            get
+            {
+                return this.txtSecond.Text;
+            }
+
+            set
+            {
+                this.txtSecond.Text = value;
+            }
+
+        }
+
+        #endregion //Properties
+
+        #region Constructors
+
         public Stats()
         {
             InitializeComponent();
         }
+
+        #endregion //Constructors
+
     }
+
 }

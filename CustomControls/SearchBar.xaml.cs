@@ -16,63 +16,47 @@ using System.Windows.Shapes;
 namespace MVVMFIleManagerWPF.CustomControls
 {
     /// <summary>
-    /// Logique d'interaction pour UserButton.xaml
+    /// Logique d'interaction pour SearchBar.xaml
     /// </summary>
-    public partial class UserButton : UserControl
+    public partial class SearchBar : UserControl
     {
+
         #region Properties
+
+        public string Text1
+        {
+            get
+            {
+                return this.txtText1.Text;
+            }
+
+            set
+            {
+                this.txtText1.Text = value;
+            }
+
+        }
 
         public ImageSource ImageSource
         {
             get
             {
-                return this.btnUser.Source;
+                return this.imgSource.Source;
             }
 
             set
             {
-                this.btnUser.Source = value;
+                this.imgSource.Source = value;
             }
 
-        }
-
-        public string Username
-        {
-            get
-            {
-                return this.txtUser.Text;
-            }
-
-            set
-            {
-                this.txtUser.Text = value;
-            }
-
-        }
-
-        public string Status
-        {
-            get
-            {
-                return this.txtStatus.Text;
-            }
-
-            set
-            {
-                this.txtStatus.Text = value;
-            }
         }
 
         #endregion //Properties
 
-        #region Constructors
-
-        public UserButton()
+        public SearchBar()
         {
             InitializeComponent();
         }
-
-        #endregion //Constructors
 
     }
 

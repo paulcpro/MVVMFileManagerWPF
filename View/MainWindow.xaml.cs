@@ -9,7 +9,7 @@ namespace MVVMFIleManagerWPF
     public partial class MainWindow : Window
     {
 
-        public FileViewModel FileItems
+        public FileViewModel FileViewModel
         {
             get
             {

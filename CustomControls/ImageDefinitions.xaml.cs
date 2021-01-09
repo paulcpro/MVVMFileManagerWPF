@@ -20,6 +20,9 @@ namespace MVVMFIleManagerWPF.CustomControls
     /// </summary>
     public partial class ImageDefinitions : UserControl
     {
+        /// <summary>
+        /// Image to representation our file extension
+        /// </summary>
         public ImageSource ImageSource
         {
             get
@@ -34,6 +37,9 @@ namespace MVVMFIleManagerWPF.CustomControls
 
         }
 
+        /// <summary>
+        /// First Text used as headline
+        /// </summary>
         public string FirstText
         {
             get
@@ -48,6 +54,9 @@ namespace MVVMFIleManagerWPF.CustomControls
 
         }
 
+        /// <summary>
+        /// Second Text used as caption
+        /// </summary>
         public string SecondText
         {
             get

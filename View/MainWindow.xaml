@@ -17,17 +17,17 @@
         <!-- Left Menu -->
         <StackPanel Grid.Column="0">
             <TextBlock Text="drive." />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/mmc.png" Text="My drive" />
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/mmc.png" Text="My drive" />
             <TextBlock Text="FILES" />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/todobw.png" Text="My files" />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/todobw.png" Text="Sharing" />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/todobw.png" Text="File requests" />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/trash.png" Text="Deleted files" />
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/todobw.png" Text="My files" />
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/todobw.png" Text="Sharing" />
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/todobw.png" Text="File requests" />
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/trash.png" Text="Deleted files" />
             <TextBlock Text="MY PLACES" />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/folder.png" Text="Designs" />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/folder.png" Text="Music" />
-            <customcontrols:SmallButtonMenu ImageSource="./Assets/folder.png" Text="Design Sprint" />
-            <customcontrols:UserButton ImageSource="./Assets/image4.jpg"  Username="Username" Status="Premium VIP"/>
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/folder.png" Text="Designs" />
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/folder.png" Text="Music" />
+            <customcontrols:SmallButtonMenu ImageSource="../Assets/folder.png" Text="Design Sprint" />
+            <customcontrols:UserButton ImageSource="../Assets/image4.jpg"  Username="Username" Status="Premium VIP"/>
         </StackPanel>
         
         <!-- Main Menu -->
@@ -76,22 +76,22 @@
             </Grid>
 
             <StackPanel Orientation="Horizontal">
-                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
-                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
-                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
-                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
+                <customcontrols:ImageDefinitions ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
+                <customcontrols:ImageDefinitions ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
+                <customcontrols:ImageDefinitions ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
+                <customcontrols:ImageDefinitions ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
             </StackPanel>
 
         </StackPanel>
         
         <!-- Right Menu -->
         <StackPanel>
-            <customcontrols:SearchBar Text1="" ImageSource="" />
+            <customcontrols:SearchBar Text1="" ImageSource="../Assets/todobw.png" />
             <TextBlock Text="Statistics" />
-            <customcontrols:Stats Text1="Downloads this week" ImageSource="./Assets/applogoexample.png" Text2="perday" />
-            <customcontrols:Stats Text1="Available Space" ImageSource="./Assets/applogoexample.png" Text2="gb left" />
-            <customcontrols:Stats Text1="Shared files" ImageSource="./Assets/applogoexample.png" Text2="today" />
-            <Image Source="" />
+            <customcontrols:Stats FirstText="Downloads this week" Number="./Assets/applogoexample.png" SecondText="perday" />
+            <customcontrols:Stats FirstText="Available Space" Number="./Assets/applogoexample.png" SecondText="gb left" />
+            <customcontrols:Stats FirstText="Shared files" Number="./Assets/applogoexample.png" SecondText="today" />
+            <Image Source="../Assets/todobw.png" />
             <TextBlock Text="Unlock more storage now!" />
             <TextBlock Text="Upgrade to Drive Plus." />
             <Button Content="UPGRADE NOW" />
