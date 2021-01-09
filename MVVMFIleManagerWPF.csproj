@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,7 +56,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="CustomControls\FileControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\ImageDefinitions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\SmallButtonMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\Stats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\UserButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,7 +84,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Converters\IconToImageConverter.cs" />
+    <Compile Include="CustomControls\FileControl.xaml.cs">
+      <DependentUpon>FileControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ImageDefinitions.xaml.cs">
+      <DependentUpon>ImageDefinitions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SmallButtonMenu.xaml.cs">
+      <DependentUpon>SmallButtonMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\Stats.xaml.cs">
+      <DependentUpon>Stats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\UserButton.xaml.cs">
+      <DependentUpon>UserButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\IconToImageSource.cs" />
+    <Compile Include="Model\FileModel.cs" />
+    <Compile Include="Model\FileTYpe.cs" />
+    <Compile Include="ViewModel\FileViewModel.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +134,70 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\applogoexample.png" />
+    <Resource Include="Assets\apps.png" />
+    <Resource Include="Assets\bell.png" />
+    <Resource Include="Assets\bell_16.png" />
+    <Resource Include="Assets\bell_64.png" />
+    <Resource Include="Assets\calendarcolor.png" />
+    <Resource Include="Assets\calendarwhite.png" />
+    <Resource Include="Assets\cartcolor.png" />
+    <Resource Include="Assets\cartwhite.png" />
+    <Resource Include="Assets\chatcolor.png" />
+    <Resource Include="Assets\chatwhite.png" />
+    <Resource Include="Assets\closecolor.png" />
+    <Resource Include="Assets\closewhite.png" />
+    <Resource Include="Assets\cloud.png" />
+    <Resource Include="Assets\contacts.png" />
+    <Resource Include="Assets\desk.jpg" />
+    <Resource Include="Assets\desk2.jpg" />
+    <Resource Include="Assets\document.png" />
+    <Resource Include="Assets\downloadsfolder.png" />
+    <Resource Include="Assets\dropbox.png" />
+    <Resource Include="Assets\folder.png" />
+    <Resource Include="Assets\googledrive.png" />
+    <Resource Include="Assets\image.png" />
+    <Resource Include="Assets\image1.jpg" />
+    <Resource Include="Assets\image2.jpg" />
+    <Resource Include="Assets\image3.jpg" />
+    <Resource Include="Assets\image4.jpg" />
+    <Resource Include="Assets\image5.jpg" />
+    <Resource Include="Assets\image6.jpg" />
+    <Resource Include="Assets\image6.png" />
+    <Resource Include="Assets\image7.jpg" />
+    <Resource Include="Assets\image8.jpg" />
+    <Resource Include="Assets\image9.jpg" />
+    <Resource Include="Assets\left.png" />
+    <Resource Include="Assets\logoutwhite.png" />
+    <Resource Include="Assets\mailcolor.png" />
+    <Resource Include="Assets\mailwhite.png" />
+    <Resource Include="Assets\mmc.png" />
+    <Resource Include="Assets\music.png" />
+    <Resource Include="Assets\newdocument.png" />
+    <Resource Include="Assets\notifcolor.png" />
+    <Resource Include="Assets\notifwhite.png" />
+    <Resource Include="Assets\onedrive.png" />
+    <Resource Include="Assets\play.png" />
+    <Resource Include="Assets\plus.png" />
+    <Resource Include="Assets\profilewhite.png" />
+    <Resource Include="Assets\profolder.png" />
+    <Resource Include="Assets\recent.png" />
+    <Resource Include="Assets\right.png" />
+    <Resource Include="Assets\right2.png" />
+    <Resource Include="Assets\search.png" />
+    <Resource Include="Assets\searchcolor.png" />
+    <Resource Include="Assets\searchwhite.png" />
+    <Resource Include="Assets\settings.png" />
+    <Resource Include="Assets\share.png" />
+    <Resource Include="Assets\sms.png" />
+    <Resource Include="Assets\star.png" />
+    <Resource Include="Assets\todobw.png" />
+    <Resource Include="Assets\todocolor.png" />
+    <Resource Include="Assets\trash.png" />
+    <Resource Include="Assets\video.png" />
+    <Resource Include="Assets\zip.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

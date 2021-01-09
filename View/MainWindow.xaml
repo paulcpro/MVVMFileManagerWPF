@@ -4,9 +4,98 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVMFIleManagerWPF"
+        xmlns:customcontrols="clr-namespace:MVVMFIleManagerWPF.CustomControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="900" Width="1350">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="350"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Menu -->
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="drive." />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/mmc.png" Text="My drive" />
+            <TextBlock Text="FILES" />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/todobw.png" Text="My files" />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/todobw.png" Text="Sharing" />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/todobw.png" Text="File requests" />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/trash.png" Text="Deleted files" />
+            <TextBlock Text="MY PLACES" />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/folder.png" Text="Designs" />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/folder.png" Text="Music" />
+            <customcontrols:SmallButtonMenu ImageSource="./Assets/folder.png" Text="Design Sprint" />
+            <customcontrols:UserButton ImageSource="./Assets/image4.jpg"  Username="Username" Status="Premium VIP"/>
+        </StackPanel>
         
+        <!-- Main Menu -->
+        <StackPanel>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                
+            </Grid>
+
+            <TextBlock Text="Recently Used"/>
+
+            <StackPanel Orientation="Horizontal">
+                
+            </StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="New files" Grid.Column="0" />
+                <Button Content="VIEW ALL" Grid.Column="2" />
+            </Grid>
+
+            <StackPanel>
+                <ListBox ItemsSource="{Binding FileItems}" HorizontalContentAlignment="Stretch" />
+            </StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Shared with me" Grid.Column="0" />
+                <Button Content="VIEW ALL" Grid.Column="2" />
+            </Grid>
+
+            <StackPanel Orientation="Horizontal">
+                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
+                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
+                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
+                <customcontrols:ImageDefinitions ImageSource="TypeOfFIle" Text1="Manual" Text2="Guidelines"/>
+            </StackPanel>
+
+        </StackPanel>
+        
+        <!-- Right Menu -->
+        <StackPanel>
+            <customcontrols:SearchBar Text1="" ImageSource="" />
+            <TextBlock Text="Statistics" />
+            <customcontrols:Stats Text1="Downloads this week" ImageSource="./Assets/applogoexample.png" Text2="perday" />
+            <customcontrols:Stats Text1="Available Space" ImageSource="./Assets/applogoexample.png" Text2="gb left" />
+            <customcontrols:Stats Text1="Shared files" ImageSource="./Assets/applogoexample.png" Text2="today" />
+            <Image Source="" />
+            <TextBlock Text="Unlock more storage now!" />
+            <TextBlock Text="Upgrade to Drive Plus." />
+            <Button Content="UPGRADE NOW" />
+        </StackPanel>
+
     </Grid>
 </Window>
