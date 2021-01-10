@@ -1,5 +1,6 @@
 ﻿using MVVMFIleManagerWPF.CustomControls;
 using MVVMFIleManagerWPF.Model;
+using MVVMFIleManagerWPF.Explorer;
 using System.Collections.ObjectModel;
 
 namespace MVVMFIleManagerWPF.ViewModel
@@ -74,9 +75,30 @@ namespace MVVMFIleManagerWPF.ViewModel
         /// Check depending if it's a folder or a file we execute the file or we open the folder
         /// </summary>
         /// <param name="pFileModel"></param>
-        public void TryToNavigateToPath(FileModel pFileModel)
+        public void TryToNavigateToPath(string pPath)
         {
+            ///If no path it's a drive
+            if(pPath == string.Empty)
+            {
+                ///Its a Drive
+            }
 
+            /// ExplorerHelper static IsDirectory(this string pPath); that why we don't need to redefine our string
+            else if(pPath.IsDirectory())
+            {
+                ///Open our directory
+            }
+
+            else if(pPath.IsFile())
+            {
+                ///Open our file
+            }
+
+            else
+            {
+                /// Something bad happens
+            }
+            
         }
 
         /// <summary>
@@ -85,7 +107,7 @@ namespace MVVMFIleManagerWPF.ViewModel
         /// <param name="pFileModel"></param>
         public void NavigateToPath(FileModel pFileModel)
         {
-            TryToNavigateToPath(pFileModel);
+            TryToNavigateToPath(pFileModel.Path);
         }
 
         /// <summary>
