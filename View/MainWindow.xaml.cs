@@ -9,6 +9,9 @@ namespace MVVMFIleManagerWPF
     public partial class MainWindow : Window
     {
 
+        /// <summary>
+        /// Used to access at our Model
+        /// </summary>
         public FileViewModel FileViewModel
         {
             get

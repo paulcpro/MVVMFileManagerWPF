@@ -11,10 +11,9 @@ namespace MVVMFIleManagerWPF.CustomControls
     public partial class FileControl : UserControl
     {
 
-
         #region Fields
 
-            
+        public Action<FileModel> NavigateToPath;
 
         #endregion //Fields
 

@@ -11,7 +11,7 @@ using MVVMFIleManagerWPF.Helpers;
 
 namespace MVVMFIleManagerWPF.Converters
 {
-    class IconToImageConverter : IValueConverter
+    public class IconToImageConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
