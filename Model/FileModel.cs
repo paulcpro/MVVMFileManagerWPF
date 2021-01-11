@@ -21,9 +21,28 @@ namespace MVVMFIleManagerWPF.Model
 
         private string mExtension;
 
+        private FileType mType;
+
         #endregion //Fields
 
         #region Properties
+
+        /// <summary>
+        /// Gets & Sets de notre mType
+        /// </summary>
+        public FileType Type
+        {
+            get
+            {
+                return this.mType;
+            }
+
+            set
+            {
+                this.mType = value;
+            }
+
+        }
 
         public DateTime DateCreated
         {

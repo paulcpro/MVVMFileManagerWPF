@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVVMFIleManagerWPF.Model
 {
-    public enum FileTYpe
+    public enum FileType
     {
         Folder, File, Drive, Shortcut
     }

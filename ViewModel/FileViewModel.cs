@@ -81,17 +81,34 @@ namespace MVVMFIleManagerWPF.ViewModel
             if(pPath == string.Empty)
             {
                 ///Its a Drive
-            }
+                foreach(FileModel lFileModel in Fetcher.GetDrives())
+                {
+                    AddFileControl(CreateFileControl(lFileModel));
+                }
 
+            }
+            
             /// ExplorerHelper static IsDirectory(this string pPath); that why we don't need to redefine our string
             else if(pPath.IsDirectory())
             {
+                ClearFileControl();
                 ///Open our directory
+                foreach(FileModel lFileModel in Fetcher.GetDirectories(pPath))
+                {
+                    AddFileControl(CreateFileControl(lFileModel));
+                }
+
             }
 
             else if(pPath.IsFile())
             {
+                ClearFileControl();
                 ///Open our file
+                foreach(FileModel lFileModel in Fetcher.GetFiles(pPath))
+                {
+                    AddFileControl(CreateFileControl(lFileModel));
+                }
+
             }
 
             else
@@ -111,7 +128,7 @@ namespace MVVMFIleManagerWPF.ViewModel
         }
 
         /// <summary>
-        /// CreateFileControl from a FileModel when we go through a repository to display all folders/files
+        /// CreateFileControl from a FileModel when we go through a repository to display all folders/files "Action<FileModel>"
         /// </summary>
         /// <param name="pFileModel"></param>
         public FileControl CreateFileControl(FileModel pFileModel)
@@ -129,7 +146,6 @@ namespace MVVMFIleManagerWPF.ViewModel
         {
             pFileControl.NavigateToPath = NavigateToPath;
         }
-
 
         #endregion //Methods
 
