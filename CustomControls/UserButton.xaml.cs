@@ -26,12 +26,12 @@ namespace MVVMFIleManagerWPF.CustomControls
         {
             get
             {
-                return this.btnUser.Source;
+                return this.btnUser.ImageSource;
             }
 
             set
             {
-                this.btnUser.Source = value;
+                this.btnUser.ImageSource = value;
             }
 
         }

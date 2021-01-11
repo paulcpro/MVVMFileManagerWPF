@@ -121,14 +121,14 @@
                 <StackPanel Grid.Column="0" Margin="40,70,0,0">
                     <TextBlock Text="drive." Foreground="#676EAA" FontSize="30" FontWeight="Bold"/>
 
-                    <customcontrols:SmallButtonMenu Foreground="#676EAA" ImageSource="../Assets/192-cursor-1.png" Text="My drive"  Margin="0,80"/>
+                    <customcontrols:SmallButtonMenu Foreground="#82819A" ImageSource="../Assets/192-cursor-1.png" Text="My drive"  Margin="0,80"/>
 
                     <StackPanel>
                         <TextBlock Text="FILES" Foreground="#CFCDCF" FontWeight="SemiBold" Margin="10"/>
                         <customcontrols:SmallButtonMenu ImageSource="../Assets/086-folder.png" Text="My files" />
                         <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/196-share-2.png" Text="Sharing"/>
                         <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/224-suitcase-1.png" Text="File requests"/>
-                        <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/trash.png" Text="Deleted files"/>
+                        <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/223-trash.png" Text="Deleted files"/>
                     </StackPanel>
 
                     <StackPanel Margin="0,50">
@@ -138,9 +138,9 @@
                         <customcontrols:SmallButtonMenu Margin="0,15,0,0" ImageSource="../Assets/folder.png" Text="Design Sprint" />
                     </StackPanel>
 
+                    <customcontrols:UserButton Margin="0,90" ImageSource="../Assets/image4.jpg"  Username="Username" Status="PREMIUM USER" />
                 </StackPanel>
 
-                <customcontrols:UserButton Margin="30,750,30,0" ImageSource="../Assets/image4.jpg"  Username="Username" Status="Premium VIP" />
 
                 <!-- Main Menu -->
                 <Border Grid.Column="1" Background="Transparent">

@@ -68,12 +68,12 @@
             <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="85"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="0" Style="{DynamicResource ButtonStyle1}">
+        <Button Grid.Column="0" Style="{DynamicResource ButtonStyle1}" Cursor="Hand">
             <Button.Content>
-                <Image Height="20" x:Name="btnImageSource" Source="{Binding Path=ImageSource}" Grid.Column="0"/>
+                <Image Height="20" x:Name="btnImageSource" Source="{Binding Path=ImageSource}"/>
             </Button.Content>
         </Button>
-        <Button Grid.Column="1" Style="{DynamicResource ButtonStyle1}" HorizontalAlignment="Left">
+        <Button Grid.Column="1" Style="{DynamicResource ButtonStyle1}" HorizontalAlignment="Left" Cursor="Hand">
             <Button.Content>
                 <TextBlock x:Name="btnText" FontWeight="SemiBold" Text="{Binding Path=Text}" VerticalAlignment="Center" Grid.Column="1"/>
             </Button.Content>

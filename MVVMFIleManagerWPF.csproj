@@ -220,5 +220,17 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\086-folder.png" />
+    <Resource Include="Assets\192-cursor-1.png" />
+    <Resource Include="Assets\196-share-2.png" />
+    <Resource Include="Assets\224-suitcase-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\223-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\193-settings.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
