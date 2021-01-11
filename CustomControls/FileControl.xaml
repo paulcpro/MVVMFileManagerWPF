@@ -15,23 +15,23 @@
     <!-- Adding of an event which get the MouseClick on our Grid-->
     <Grid MouseDown="Grid_MouseDown" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30"/>
-            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="135"/>
             <ColumnDefinition Width="40"/>
-            <ColumnDefinition Width="30"/>
-            <ColumnDefinition Width="30"/>
-            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Image x:Name="btnImage" Source="{Binding Icon, Converter={StaticResource IconToImageConverter}}" Grid.Column="0" HorizontalAlignment="Left"/>
-        <TextBlock x:Name="txtFileNumber" Text="{Binding Path=Text}" Grid.Column="1"/>
+        <TextBlock x:Name="txtFileNumber" VerticalAlignment="Center" Text="{Binding Path}" Grid.Column="1"/>
         <TextBlock x:Name="txtFileType" Text="{Binding Name}" Grid.Column="3"/>
         <TextBlock x:Name="txtDate" Text="{Binding DateCreated}" Grid.Column="4"/>
         <TextBlock x:Name="txtExtension" Text="{Binding Size, Converter={StaticResource FileSizeConverter}}" Grid.Column="5"/>
-        <Image x:Name="btnImageOptions" Source="{Binding Path=ImageOptions}" Grid.Column="6"/>
-        <Image x:Name="btnImageAdd" Source="{Binding Path=ImageAdd}" Grid.Column="7"/>
-        <Image x:Name="btnImageShare" Source="{Binding Path=ImageShare}" Grid.Column="8"/>
+        <Image x:Name="btnImageOptions" Source="../Assets/settings.png" Grid.Column="6"/>
+        <Image x:Name="btnImageAdd" Source="../Assets/plus.png" Grid.Column="7"/>
+        <Image x:Name="btnImageShare" Source="../Assets/share.png" Grid.Column="8"/>
     </Grid>
 </UserControl>

@@ -33,7 +33,7 @@ namespace MVVMFIleManagerWPF.Explorer
                     DateCreated = lDirectoryInfo.CreationTime,
                     DateModified = lDirectoryInfo.LastWriteTime,
                     Type = FileType.Folder,
-                    Size = long.MaxValue
+                    Size = long.MaxValue                    
                 };
 
                 lListFileModel.Add(lFileModel);
