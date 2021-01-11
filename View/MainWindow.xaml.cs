@@ -29,6 +29,7 @@ namespace MVVMFIleManagerWPF
         public MainWindow()
         {
             InitializeComponent();
+            FileViewModel.TryToNavigateToPath(@"F:\testfolder");
         }
 
     }

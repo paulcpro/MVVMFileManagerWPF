@@ -81,8 +81,8 @@ namespace MVVMFIleManagerWPF.Explorer
         /// <returns>Path of the shortcut</returns>
         public static string GetShortcutTargetFolder(string pShortcutFileName)
         {
-            string pDirectoryName = pShortcutFileName.GetDirectory();
-            string pFileName = pShortcutFileName.GetFileName();
+            string pDirectoryName = Path.GetDirectoryName(pShortcutFileName);
+            string pFileName = Path.GetFileName(pShortcutFileName);
 
             Shell lShell = new Shell();
             Folder lFolder = lShell.NameSpace(pDirectoryName);
@@ -90,7 +90,7 @@ namespace MVVMFIleManagerWPF.Explorer
 
             if(lFolderItem != null)
             {
-                ShellLinkObject lShellLink = lFolderItem.GetLink as ShellLinkObject;
+                ShellLinkObject lShellLink = (ShellLinkObject)lFolderItem.GetLink;
 
                 return lShellLink.Path;
             }

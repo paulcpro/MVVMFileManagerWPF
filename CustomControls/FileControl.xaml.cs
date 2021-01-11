@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Input;
 
 namespace MVVMFIleManagerWPF.CustomControls
 {
@@ -125,6 +126,31 @@ namespace MVVMFIleManagerWPF.CustomControls
             set
             {
                 this.txtFileNumber.Text = value;
+            }
+
+        }
+
+        /// <summary>
+        /// Used to trigger the double click on our FileControl
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            /// If Button is : Pressed / Clicked two times / IsLeftButton of the mouse
+            if(e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2 && e.ChangedButton == MouseButton.Left)
+            {
+                /// Call the Action<FileModel> delegeate
+                NavigateToPath?.Invoke(FileModel);
+            }
+
+        }
+
+        private void UserControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                NavigateToPath?.Invoke(FileModel);
             }
 
         }

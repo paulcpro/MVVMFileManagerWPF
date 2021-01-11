@@ -88,6 +88,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converters\FileSizeConverter.cs" />
     <Compile Include="Converters\IconToImageConverter.cs" />
     <Compile Include="CustomControls\FileControl.xaml.cs">
       <DependentUpon>FileControl.xaml</DependentUpon>
@@ -108,9 +109,10 @@
       <DependentUpon>UserButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Explorer\ExplorerHelper.cs" />
+    <Compile Include="Explorer\Fetcher.cs" />
     <Compile Include="Helpers\IconToImageSource.cs" />
     <Compile Include="Model\FileModel.cs" />
-    <Compile Include="Model\FileTYpe.cs" />
+    <Compile Include="Model\FileType.cs" />
     <Compile Include="ViewModel\FileViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVMFIleManagerWPF"
         xmlns:customcontrols="clr-namespace:MVVMFIleManagerWPF.CustomControls"
+        xmlns:viewmodels="clr-namespace:MVVMFIleManagerWPF.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.DataContext>
+        <viewmodels:FileViewModel/>
+    </Window.DataContext>
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">

@@ -2,6 +2,7 @@
 using MVVMFIleManagerWPF.Model;
 using MVVMFIleManagerWPF.Explorer;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace MVVMFIleManagerWPF.ViewModel
 {
@@ -80,6 +81,7 @@ namespace MVVMFIleManagerWPF.ViewModel
             ///If no path it's a drive
             if(pPath == string.Empty)
             {
+                ClearFileControl();
                 ///Its a Drive
                 foreach(FileModel lFileModel in Fetcher.GetDrives())
                 {
@@ -98,17 +100,16 @@ namespace MVVMFIleManagerWPF.ViewModel
                     AddFileControl(CreateFileControl(lFileModel));
                 }
 
-            }
-
-            else if(pPath.IsFile())
-            {
-                ClearFileControl();
-                ///Open our file
                 foreach(FileModel lFileModel in Fetcher.GetFiles(pPath))
                 {
                     AddFileControl(CreateFileControl(lFileModel));
                 }
 
+            }
+
+            else if(pPath.IsFile())
+            {
+                MessageBox.Show($"Openning {pPath}");
             }
 
             else
