@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControls\Folders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\ImageDefinitions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +96,9 @@
     <Compile Include="Converters\IconToImageConverter.cs" />
     <Compile Include="CustomControls\FileControl.xaml.cs">
       <DependentUpon>FileControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\Folders.xaml.cs">
+      <DependentUpon>Folders.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\ImageDefinitions.xaml.cs">
       <DependentUpon>ImageDefinitions.xaml</DependentUpon>
@@ -240,6 +247,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\75205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\big-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\173-user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
