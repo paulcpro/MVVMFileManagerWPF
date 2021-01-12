@@ -107,9 +107,50 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <SolidColorBrush x:Key="Button.Static.Background2" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Static.Border2" Color="Transparent"/>
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="#727ED4"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="8"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="15" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#727ED4"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#727ED4"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Border Background="Transparent">
-        <Border Background="#FF37A0EA" CornerRadius="20" BorderThickness="0">
+        <Border Background="White" CornerRadius="20" BorderThickness="0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="250"/>
@@ -144,7 +185,7 @@
 
                 <!-- Main Menu -->
                 <Border Grid.Column="1" Background="Transparent">
-                    <Border Background="#5C87FF" CornerRadius="10" BorderThickness="0">
+                    <Border Background="#EFF2FA" CornerRadius="10" BorderThickness="0">
 
                         <StackPanel Grid.Column="1">
 
@@ -166,7 +207,7 @@
                                         <Image Source="../Assets/right.png" />
                                     </Button.Content>
                                 </Button>
-                                <Button Content="UPLOAD NEW FILE" Grid.Column="4"/>
+                                <Button Content="UPLOAD NEW FILE" Grid.Column="4" Style="{DynamicResource ButtonStyle2}"/>
                             </Grid>
 
                             <TextBlock Margin="40,10,0,0" Text="Recently Used" FontWeight="Bold" FontSize="18"/>
@@ -205,13 +246,13 @@
                             </Grid>
 
                             <StackPanel Orientation="Horizontal" Margin="50,20,50,0">
-                                <customcontrols:ImageDefinitions ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
-                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
-                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
-                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
-                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
-                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
-                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/todobw.png" FirstText="Manual" SecondText="Guidelines"/>
+                                <customcontrols:ImageDefinitions ImageSource="../Assets/102-image.png" FirstText="Manual" SecondText="Guidelines"/>
+                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/102-image.png" FirstText="Manual" SecondText="Guidelines"/>
+                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/102-image.png" FirstText="Manual" SecondText="Guidelines"/>
+                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/102-image.png" FirstText="Manual" SecondText="Guidelines"/>
+                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/102-image.png" FirstText="Manual" SecondText="Guidelines"/>
+                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/102-image.png" FirstText="Manual" SecondText="Guidelines"/>
+                                <customcontrols:ImageDefinitions Margin="20,0" ImageSource="../Assets/102-image.png" FirstText="Manual" SecondText="Guidelines"/>
                             </StackPanel>
 
                         </StackPanel>
@@ -220,15 +261,15 @@
 
                 <!-- Right Menu -->
                 <StackPanel Grid.Column="2">
-                    <customcontrols:SearchBar Margin="20,20,20,20" Text1="SEARCH YOUR CONTENT" ImageSource="../Assets/todobw.png" />
+                    <customcontrols:SearchBar Margin="20" Text1="SEARCH YOUR CONTENT" ImageSource="../Assets/191-search.png"/>
                     <TextBlock Margin="20,20,20,20" Text="Statistics" FontWeight="Bold" FontSize="18"/>
                     <customcontrols:Stats Margin="20,10,20,20" FirstText="Download this week" Number="69" SecondText="perday" />
                     <customcontrols:Stats Margin="20,10,20,20" FirstText="Available Space" Number="12" SecondText="gb left" />
                     <customcontrols:Stats Margin="20,10,20,20" FirstText="Shared files" Number="49" SecondText="today" />
-                    <Image Margin="10,100,10,10" Source="../Assets/todobw.png" />
+                    <Image Margin="10,50,10,10" Source="../Assets/75205.png" />
                     <TextBlock Text="Unlock more storage now!" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
                     <TextBlock Text="Upgrade to Drive Plus." HorizontalAlignment="Center" FontWeight="Bold" Foreground="#CFCDCF"/>
-                    <Button Margin="0,25" Width="100" Content="UPGRADE NOW" />
+                    <Button Margin="0,20" Width="135" Height="30" Content="UPGRADE NOW" Style="{DynamicResource ButtonStyle2}"/>
                 </StackPanel>
 
             </Grid>

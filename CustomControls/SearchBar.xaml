@@ -8,10 +8,11 @@
              d:DesignHeight="40" d:DesignWidth="200">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="txtText1" Text="{Binding Path=Text1}" VerticalAlignment="Center" Grid.Column="0"/>
-        <Image x:Name="imgSource" Source="{Binding Path=ImageSource}" Grid.Column="1"/>
+        <TextBlock Margin="10,0,0,0" x:Name="txtText1" Text="{Binding Path=Text1}" Foreground="#A2A2A3" VerticalAlignment="Center" Grid.Column="0"/>
+        <Image x:Name="imgSource" Source="{Binding Path=ImageSource}" Grid.Column="2" HorizontalAlignment="Right"/>
     </Grid>
 </UserControl>
