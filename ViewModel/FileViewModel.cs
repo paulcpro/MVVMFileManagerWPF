@@ -3,6 +3,7 @@ using MVVMFIleManagerWPF.Model;
 using MVVMFIleManagerWPF.Explorer;
 using System.Collections.ObjectModel;
 using System.Windows;
+using System.Diagnostics;
 
 namespace MVVMFIleManagerWPF.ViewModel
 {
@@ -109,7 +110,7 @@ namespace MVVMFIleManagerWPF.ViewModel
 
             else if(pPath.IsFile())
             {
-                MessageBox.Show($"Openning {pPath}");
+                Process.Start("explorer.exe", pPath);
             }
 
             else

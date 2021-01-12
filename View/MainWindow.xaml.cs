@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using MVVMFIleManagerWPF.ViewModel;
 
 namespace MVVMFIleManagerWPF
@@ -32,5 +33,11 @@ namespace MVVMFIleManagerWPF
             FileViewModel.TryToNavigateToPath(@"F:\testfolder");
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
     }
+
 }

@@ -7,7 +7,7 @@
         xmlns:customcontrols="clr-namespace:MVVMFIleManagerWPF.CustomControls"
         xmlns:viewmodels="clr-namespace:MVVMFIleManagerWPF.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow">
+        Title="MainWindow" Height="900" Width="1350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
     <Window.DataContext>
         <viewmodels:FileViewModel/>
     </Window.DataContext>
@@ -236,12 +236,12 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="150"/>
                                 </Grid.ColumnDefinitions>
-                                <Button Grid.Column="0" Style="{DynamicResource ButtonStyle1}">
+                                <Button Grid.Column="0" Style="{DynamicResource ButtonStyle1}" BorderThickness="0">
                                     <Button.Content>
                                         <Image Source="../Assets/left.png" />
                                     </Button.Content>
                                 </Button>
-                                <Button Grid.Column="2" Style="{DynamicResource ButtonStyle1}">
+                                <Button Grid.Column="2" Style="{DynamicResource ButtonStyle1}" BorderThickness="0">
                                     <Button.Content>
                                         <Image Source="../Assets/right.png" />
                                     </Button.Content>
@@ -299,6 +299,8 @@
                 </Border>
 
                 <!-- Right Menu -->
+                <Button Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="X" Grid.Column="2" Height="20" Width="20" Style="{DynamicResource ButtonStyle1}" Click="Button_Click" />
+
                 <StackPanel Grid.Column="2">
                     <customcontrols:SearchBar Margin="55,20,55,20" Height="35" Text1="SEARCH YOUR CONTENT" ImageSource="../Assets/191-search.png"/>
                     <TextBlock Margin="55,20,55,20" Text="Statistics" FontWeight="Bold" FontSize="18"/>
