@@ -72,26 +72,26 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Ellipse Grid.Column="0" Grid.RowSpan="2">
+        <Ellipse Stroke="White" StrokeThickness="2" Grid.Column="0" Grid.RowSpan="2">
             <Ellipse.Fill>
                 <ImageBrush x:Name="btnUser" ImageSource="{Binding Path=ImageSource}"/>
             </Ellipse.Fill>
         </Ellipse>
-        <!--<Button Grid.Column="0" Grid.RowSpan="2">
+        <Button Grid.Column="0" Grid.RowSpan="2" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
                         <Ellipse Stroke="White" StrokeThickness="2">
                             <Ellipse.Fill>
                                 <ImageBrush x:Name="btnUser" ImageSource="{Binding Path=ImageSource}"/>
-                            </Ellipse.Fill>
+                            </Ellipse.Fill>                            
                         </Ellipse>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
-        </Button>-->
-        <Button Grid.Column="1" Grid.Row="0" Margin="10,0,0,0" Style="{DynamicResource ButtonStyle1}" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        </Button>
+        <Button Grid.Column="1" Grid.Row="0" Margin="10,0,0,0" Style="{DynamicResource ButtonStyle1}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Cursor="Hand">
             <Button.Content>
                 <TextBlock x:Name="txtUser" FontWeight="Bold" FontSize="11" Text="{Binding Path=Username}" />
             </Button.Content>

@@ -300,12 +300,12 @@
 
                 <!-- Right Menu -->
                 <StackPanel Grid.Column="2">
-                    <customcontrols:SearchBar Margin="20" Text1="SEARCH YOUR CONTENT" ImageSource="../Assets/191-search.png"/>
-                    <TextBlock Margin="20,20,20,20" Text="Statistics" FontWeight="Bold" FontSize="18"/>
-                    <customcontrols:Stats Margin="30,10,30,20" FirstText="Download this week" Number="69" SecondText="perday" />
-                    <customcontrols:Stats Margin="30,10,30,20" FirstText="Available Space" Number="12" SecondText="gb left" />
-                    <customcontrols:Stats Margin="30,10,30,20" FirstText="Shared files" Number="49" SecondText="today" />
-                    <Image Margin="10,50,10,10" Source="../Assets/75205.png" />
+                    <customcontrols:SearchBar Margin="55,20,55,20" Height="35" Text1="SEARCH YOUR CONTENT" ImageSource="../Assets/191-search.png"/>
+                    <TextBlock Margin="55,20,55,20" Text="Statistics" FontWeight="Bold" FontSize="18"/>
+                    <customcontrols:Stats Margin="55,10,55,20" Height="60" FirstText="Download this week" Number="69" SecondText="perday" />
+                    <customcontrols:Stats Margin="55,10,55,20" Height="60" FirstText="Available Space" Number="12" SecondText="gb left" />
+                    <customcontrols:Stats Margin="55,10,55,20" Height="60" FirstText="Shared files" Number="49" SecondText="today" />
+                    <Image Margin="55,50,55,10" Source="../Assets/tele-workers.png" />
                     <TextBlock Text="Unlock more storage now!" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"/>
                     <TextBlock Text="Upgrade to Drive Plus." HorizontalAlignment="Center" FontWeight="Bold" Foreground="#CFCDCF"/>
                     <Button Margin="0,20" Width="135" Height="30" Content="UPGRADE NOW" Style="{DynamicResource ButtonStyle2}"/>
