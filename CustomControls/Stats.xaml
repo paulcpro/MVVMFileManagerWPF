@@ -13,14 +13,14 @@
             <Border Background="#EFF2FA" CornerRadius="15">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="100"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="80"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Column="0" x:Name="txtFirst" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"  Width="70" Text="{Binding FirstText}" FontWeight="Bold" FontSize="14"/>
+                    <TextBlock Margin="20,0,0,0" Grid.Column="0" x:Name="txtFirst" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"  Width="70" Text="{Binding FirstText}" FontWeight="Bold" FontSize="14"/>
                     <TextBlock Grid.Column="1" x:Name="txtNumber" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Number}" FontSize="20"/>
-                    <TextBlock Grid.Column="2" x:Name="txtSecond" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding SecondText}" />
+                    <TextBlock Margin="0,0,20,0" Grid.Column="2" x:Name="txtSecond" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding SecondText}" />
                 </Grid>
             </Border>
         </Border>
